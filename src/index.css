@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --ag-void: #0B1528;
+  --ag-dusk: #070E1B;
+  --ag-midnight: #0F1D38;
+  --ag-sapphire: #162D54;
+  --ag-cobalt: #0E4EB2;
+  --ag-azure: #2078CF;
+  --ag-cyan: #00D4FF;
+  --ag-navy: #0E1A30;
+  --ag-charcoal: #1A2232;
+  --ag-metallic: #11203A;
+  color-scheme: dark;
+}
+
+body {
+  background-color: #0A1324;
+  background-image: 
+    radial-gradient(ellipse 90% 55% at 50% -10%, rgba(45, 95, 170, 0.22), transparent 70%),
+    linear-gradient(180deg, #11203A 0%, #0C1629 45%, #070E1B 100%);
+  background-attachment: fixed;
+  color: #F9FAFB;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: #070E1B; }
+::-webkit-scrollbar-thumb { background: #162D54; border-radius: 9999px; }
+::-webkit-scrollbar-thumb:hover { background: #2078CF; }

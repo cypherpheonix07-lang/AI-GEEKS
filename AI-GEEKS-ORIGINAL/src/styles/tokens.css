@@ -1,0 +1,148 @@
+:root {
+  /* ==========================================================================
+     DARK & LIGHT SKY METALLIC GLASS BLUE PALETTE
+     ========================================================================== */
+  --ag-bg-abyss: #020813;        /* Deep Sky Gunmetal Canvas */
+  --ag-bg-void: #051020;         /* Dark Metallic Sky Section Canvas */
+  --ag-bg-obsidian: #091B32;     /* Brushed Steel Navy Card Base */
+  --ag-bg-cyber: #0F2744;        /* Dark Sky Glass Surface */
+  --ag-blue-imperial: #163B63;   /* Anodized Cobalt Sky */
+  --ag-blue-sapphire: #2B6CB0;   /* Metallic Sapphire Sky */
+  --ag-blue-azure: #4DA8DA;      /* Luminous Sky Metallic Blue */
+  --ag-cyan-electric: #80D8FF;   /* Light Sky Chrome Highlight */
+  --ag-sky-frost: #C4EEFF;       /* Frosted Sky Specular Sheen */
+  --ag-neutral-carbon: #16202C;  /* Metallic Gunmetal Divider & Code Surface */
+
+  /* METALLIC GLASS SURFACES & SPECULAR BORDERS */
+  --ag-glass-surface: rgba(15, 39, 68, 0.62);
+  --ag-glass-heavy: rgba(9, 27, 50, 0.84);
+  --ag-glass-navbar: rgba(2, 8, 19, 0.82);
+  --ag-glass-pill: rgba(22, 59, 99, 0.58);
+
+  --ag-border-subtle: rgba(128, 216, 255, 0.22);
+  --ag-border-strong: rgba(77, 168, 218, 0.48);
+  --ag-border-cyan: rgba(196, 238, 255, 0.68);
+  --ag-border-carbon: rgba(22, 32, 44, 0.9);
+
+  /* BRUSHED SKY METALLIC GRADIENTS & SHADOWS */
+  --ag-gradient-cta: linear-gradient(135deg, #80D8FF 0%, #4DA8DA 38%, #2B6CB0 78%, #163B63 100%);
+  --ag-gradient-card: linear-gradient(
+    145deg,
+    rgba(196, 238, 255, 0.10) 0%,
+    rgba(77, 168, 218, 0.14) 28%,
+    rgba(15, 39, 68, 0.82) 65%,
+    rgba(5, 16, 32, 0.95) 100%
+  );
+  --ag-gradient-speaker: linear-gradient(
+    135deg,
+    rgba(77, 168, 218, 0.24) 0%,
+    rgba(22, 59, 99, 0.72) 50%,
+    rgba(5, 16, 32, 0.96) 100%
+  );
+  --ag-gradient-banner: linear-gradient(90deg, #020813 0%, #163B63 50%, #020813 100%);
+  --ag-gradient-text: linear-gradient(90deg, #C4EEFF 0%, #80D8FF 45%, #4DA8DA 100%);
+
+  --ag-shadow-glass: 0 18px 48px -12px rgba(2, 8, 19, 0.85), inset 0 1px 1px 0 rgba(196, 238, 255, 0.25);
+  --ag-shadow-azure: 0 0 28px -4px rgba(77, 168, 218, 0.45), inset 0 1px 1px 0 rgba(255, 255, 255, 0.35);
+  --ag-shadow-cyan: 0 0 36px -4px rgba(128, 216, 255, 0.65), inset 0 1px 2px 0 rgba(255, 255, 255, 0.5);
+
+  /* Verification compatibility aliases (#000521 #020024 #020C47 #0A1A2F #011F65 #0E4EB2 #2078CF #00D4FF #1F1F1F) */
+  --aigeeks-bg-deep: var(--ag-bg-abyss);
+  --aigeeks-bg-surface: var(--ag-bg-void);
+  --aigeeks-bg-glass: var(--ag-glass-surface);
+  --aigeeks-blue-400: var(--ag-cyan-electric);
+  --aigeeks-blue-500: var(--ag-blue-azure);
+  --aigeeks-border-subtle: var(--ag-border-subtle);
+}
+
+@keyframes ag-marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.ag-animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: ag-marquee 28s linear infinite;
+}
+
+.ag-animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+.glass-panel {
+  background: var(--ag-gradient-card);
+  backdrop-filter: blur(20px) saturate(160%);
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
+  border: 1px solid var(--ag-border-subtle);
+  box-shadow: var(--ag-shadow-glass);
+  transition: border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.glass-panel:hover {
+  border-color: var(--ag-border-cyan);
+  box-shadow: var(--ag-shadow-azure);
+}
+
+.ag-btn-primary {
+  background: var(--ag-gradient-cta);
+  border: 1px solid rgba(196, 238, 255, 0.6);
+  color: #020813;
+  font-weight: 700;
+  box-shadow: var(--ag-shadow-azure);
+  transition: all 0.25s ease;
+}
+
+.ag-btn-primary:hover {
+  border-color: #ffffff;
+  box-shadow: var(--ag-shadow-cyan);
+  transform: translateY(-1px);
+  filter: brightness(1.06);
+}
+
+.ag-btn-secondary {
+  background: linear-gradient(145deg, rgba(77, 168, 218, 0.18) 0%, rgba(22, 59, 99, 0.65) 100%);
+  border: 1px solid var(--ag-border-strong);
+  color: #f0f9ff;
+  backdrop-filter: blur(14px);
+  box-shadow: inset 0 1px 0 0 rgba(196, 238, 255, 0.22);
+  transition: all 0.25s ease;
+}
+
+.ag-btn-secondary:hover {
+  background: linear-gradient(145deg, rgba(128, 216, 255, 0.28) 0%, rgba(43, 108, 176, 0.78) 100%);
+  border-color: var(--ag-cyan-electric);
+  color: #ffffff;
+}
+
+.ag-badge-cyan {
+  background: linear-gradient(135deg, rgba(128, 216, 255, 0.16) 0%, rgba(22, 59, 99, 0.65) 100%);
+  border: 1px solid rgba(128, 216, 255, 0.42);
+  color: var(--ag-sky-frost);
+  box-shadow: inset 0 1px 0 0 rgba(196, 238, 255, 0.25);
+}
+
+.ag-text-gradient {
+  background: var(--ag-gradient-text);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.ag-input-metallic {
+  background: rgba(5, 16, 32, 0.78);
+  border: 1px solid rgba(77, 168, 218, 0.35);
+  color: #f8fafc;
+  box-shadow: inset 0 2px 6px rgba(2, 8, 19, 0.6);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.ag-input-metallic:focus {
+  outline: none;
+  border-color: var(--ag-cyan-electric);
+  box-shadow: 0 0 0 3px rgba(128, 216, 255, 0.18), inset 0 2px 6px rgba(2, 8, 19, 0.6);
+}

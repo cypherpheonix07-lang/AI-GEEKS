@@ -1,0 +1,40 @@
+{
+  "name": "ai-geeks-community-platform",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "typecheck": "tsc --noEmit",
+    "audit:site": "node scripts/audit-full-site.mjs",
+    "verify:clone": "node scripts/verify-clone.mjs",
+    "verify:readme": "node scripts/verify-readme.mjs",
+    "verify:admin": "node scripts/verify-admin-routes.mjs",
+    "verify:build": "node scripts/verify-app-and-build.mjs",
+    "verify:all": "node scripts/verify-clone.mjs && node scripts/verify-readme.mjs && npm run typecheck && npm run build"
+  },
+  "dependencies": {
+    "@gsap/react": "^2.1.1",
+    "@opencode/cli": "^2.3.2",
+    "clsx": "^2.1.1",
+    "framer-motion": "^12.4.7",
+    "gsap": "^3.12.5",
+    "lenis": "^1.1.20",
+    "lucide-react": "^0.475.0",
+    "next": "^16.4.6",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "tailwind-merge": "^3.0.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.3.5",
+    "@types/node": "^22.13.4",
+    "@types/react": "^19.0.8",
+    "@types/react-dom": "^19.0.3",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.5.2",
+    "tailwindcss": "^4.3.5",
+    "typescript": "^5.7.3"
+  }
+}

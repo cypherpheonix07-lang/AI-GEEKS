@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 380" width="100%" height="380" fill="none" role="img" aria-label="AI GEEKS Community Platform Banner">
+  <defs>
+    <linearGradient id="bgCanvas" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#000521" />
+      <stop offset="50%" stop-color="#020C47" />
+      <stop offset="100%" stop-color="#020024" />
+    </linearGradient>
+
+    <linearGradient id="glassSurface" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0A1A2F" stop-opacity="0.88" />
+      <stop offset="60%" stop-color="#020C47" stop-opacity="0.78" />
+      <stop offset="100%" stop-color="#000521" stop-opacity="0.95" />
+    </linearGradient>
+
+    <linearGradient id="cyanAzureText" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00D4FF">
+        <animate attributeName="stop-color" values="#00D4FF;#2078CF;#00D4FF" dur="6s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="50%" stop-color="#2078CF" />
+      <stop offset="100%" stop-color="#FFFFFF" />
+    </linearGradient>
+
+    <linearGradient id="mascotShell" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2078CF" />
+      <stop offset="55%" stop-color="#0E4EB2" />
+      <stop offset="100%" stop-color="#011F65" />
+    </linearGradient>
+
+    <radialGradient id="ambientSpotlight" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00D4FF" stop-opacity="0.32" />
+      <stop offset="55%" stop-color="#2078CF" stop-opacity="0.12" />
+      <stop offset="100%" stop-color="#000521" stop-opacity="0" />
+    </radialGradient>
+
+    <pattern id="cyberGrid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M 48 0 L 0 0 0 48" fill="none" stroke="#2078CF" stroke-width="0.75" stroke-opacity="0.18" />
+    </pattern>
+  </defs>
+
+  <!-- Base Abyssal Canvas -->
+  <rect width="1200" height="380" rx="24" fill="url(#bgCanvas)" />
+  <rect width="1200" height="380" rx="24" fill="url(#cyberGrid)" />
+
+  <!-- Pulsing Ambient Spotlight -->
+  <circle cx="920" cy="190" r="240" fill="url(#ambientSpotlight)">
+    <animate attributeName="r" values="210;260;210" dur="5s" repeatCount="indefinite" />
+  </circle>
+  <circle cx="260" cy="80" r="180" fill="url(#ambientSpotlight)">
+    <animate attributeName="opacity" values="0.5;0.9;0.5" dur="4s" repeatCount="indefinite" />
+  </circle>
+
+  <!-- Main Glassmorphic Stage Frame -->
+  <rect x="28" y="28" width="1144" height="324" rx="20" fill="url(#glassSurface)" stroke="#2078CF" stroke-opacity="0.4" stroke-width="1.5" />
+
+  <!-- Top Carbon Status Bar -->
+  <rect x="56" y="54" width="350" height="32" rx="16" fill="#1F1F1F" stroke="#00D4FF" stroke-opacity="0.45" stroke-width="1" />
+  <circle cx="76" cy="70" r="5" fill="#00D4FF">
+    <animate attributeName="opacity" values="1;0.25;1" dur="1.8s" repeatCount="indefinite" />
+  </circle>
+  <text x="92" y="74" fill="#00D4FF" font-family="monospace" font-size="11" font-weight="bold" letter-spacing="1.5">
+    MADE FOR THE COMMUNITY, BY THE COMMUNITY
+  </text>
+
+  <!-- Brand Typography -->
+  <text x="56" y="156" fill="url(#cyanAzureText)" font-family="system-ui, -apple-system, sans-serif" font-size="64" font-weight="900" letter-spacing="-1.5">
+    AI GEEKS
+  </text>
+  <text x="56" y="198" fill="#F8FAFC" font-family="system-ui, -apple-system, sans-serif" font-size="24" font-weight="700">
+    Next.js 16 · React 19 · GSAP ScrollTrigger · Blue Glassmorphism
+  </text>
+  <text x="56" y="236" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="16">
+    The open-source developer hub for AI builders, LLM workshops, Q&amp;A threads, and 24-hour software hackathons.
+  </text>
+
+  <!-- Metric Pills -->
+  <g transform="translate(56, 268)">
+    <rect x="0" y="0" width="150" height="44" rx="12" fill="#011F65" fill-opacity="0.7" stroke="#00D4FF" stroke-opacity="0.5" />
+    <text x="20" y="27" fill="#00D4FF" font-family="monospace" font-size="14" font-weight="bold">10k+ MEMBERS</text>
+
+    <rect x="166" y="0" width="160" height="44" rx="12" fill="#020C47" stroke="#2078CF" stroke-opacity="0.5" />
+    <text x="186" y="27" fill="#F8FAFC" font-family="monospace" font-size="14" font-weight="bold">12+ MEETUPS</text>
+
+    <rect x="342" y="0" width="185" height="44" rx="12" fill="#0A1A2F" stroke="#0E4EB2" stroke-opacity="0.6" />
+    <text x="362" y="27" fill="#00D4FF" font-family="monospace" font-size="14" font-weight="bold">9 BLUE TOKENS</text>
+  </g>
+
+  <!-- Floating 3D Mascot Stage -->
+  <g transform="translate(850, 68)">
+    <animateTransform attributeName="transform" type="translate" values="850,68; 850,52; 850,68" dur="3.6s" repeatCount="indefinite" />
+
+    <!-- Outer Orbit Ring -->
+    <ellipse cx="110" cy="125" rx="105" ry="34" fill="none" stroke="#00D4FF" stroke-width="1.5" stroke-dasharray="8 6" stroke-opacity="0.55">
+      <animateTransform attributeName="transform" type="rotate" from="0 110 125" to="360 110 125" dur="18s" repeatCount="indefinite" />
+    </ellipse>
+
+    <!-- Antenna -->
+    <line x1="110" y1="10" x2="110" y2="42" stroke="#00D4FF" stroke-width="5" stroke-linecap="round" />
+    <circle cx="110" cy="8" r="8" fill="#00D4FF">
+      <animate attributeName="r" values="7;10;7" dur="2s" repeatCount="indefinite" />
+    </circle>
+
+    <!-- 3D Bot Head -->
+    <rect x="42" y="42" width="136" height="102" rx="32" fill="url(#mascotShell)" stroke="#00D4FF" stroke-width="2.5" />
+    <rect x="58" y="60" width="104" height="60" rx="18" fill="#000521" stroke="#2078CF" stroke-width="2" />
+
+    <!-- Glowing Cyber Eyes -->
+    <circle cx="86" cy="90" r="10" fill="#00D4FF">
+      <animate attributeName="r" values="10;11.5;10" dur="2.4s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="134" cy="90" r="10" fill="#00D4FF">
+      <animate attributeName="r" values="10;11.5;10" dur="2.4s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="89" cy="87" r="3.5" fill="#FFFFFF" />
+    <circle cx="137" cy="87" r="3.5" fill="#FFFFFF" />
+
+    <!-- Torso Core -->
+    <rect x="56" y="154" width="108" height="58" rx="18" fill="url(#mascotShell)" stroke="#2078CF" stroke-width="2" />
+    <text x="110" y="189" text-anchor="middle" fill="#00D4FF" font-family="monospace" font-size="14" font-weight="bold">
+      AIGEEKS::V3
+    </text>
+  </g>
+</svg>
