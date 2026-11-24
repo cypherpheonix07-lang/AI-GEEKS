@@ -111,8 +111,16 @@ export default function Navbar() {
             </div>
           </div>
 
-          {/* Column 3 (Right): Primary Join CTA */}
-          <div className="hidden xl:flex shrink-0 items-center justify-end justify-self-end">
+          {/* Column 3 (Right): DevFest 2026 Switcher & Primary Join CTA */}
+          <div className="hidden xl:flex shrink-0 items-center gap-3 justify-end justify-self-end">
+            <Link
+              href="/devfest"
+              className="inline-flex h-10 items-center gap-2 rounded-xl bg-gradient-to-r from-[#2B6CB0]/30 via-[#163B63]/60 to-[#091B32] px-3.5 font-mono text-xs font-bold text-[#80D8FF] shadow-[0_0_20px_rgba(43,108,176,0.3)] hover:text-white hover:scale-105 transition-all"
+            >
+              <span className="h-2 w-2 rounded-full bg-[#80D8FF] animate-pulse" />
+              <span>DevFest 2026 ⚡</span>
+            </Link>
+
             <Link
               href="/join"
               className="ag-btn-primary inline-flex h-10 items-center gap-2 whitespace-nowrap rounded-xl px-5 text-xs sm:text-sm"
@@ -161,9 +169,18 @@ export default function Navbar() {
                 );
               })}
             </div>
-            <div className="mt-4">
+            <div className="mt-4 flex flex-col gap-2">
+              <Link
+                href="/devfest"
+                onClick={() => setMobileMenuOpen(false)}
+                className="flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-[#2B6CB0]/40 via-[#163B63] to-[#091B32] px-4 py-3 font-mono text-sm font-bold text-[#80D8FF] shadow-[0_0_20px_rgba(43,108,176,0.35)]"
+              >
+                <span className="h-2 w-2 rounded-full bg-[#80D8FF] animate-pulse" />
+                <span>DevFest Chennai 2026 ⚡</span>
+              </Link>
               <Link
                 href="/join"
+                onClick={() => setMobileMenuOpen(false)}
                 className="ag-btn-primary flex w-full items-center justify-center gap-2 rounded-xl px-4 py-3 text-sm font-bold"
               >
                 <span>Join the community</span>
