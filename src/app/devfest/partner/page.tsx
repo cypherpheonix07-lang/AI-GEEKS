@@ -1,18 +1,58 @@
-"use client";
-
 import React from "react";
 import Link from "next/link";
 import { Users, Sparkles, ExternalLink, Heart, ArrowRight } from "lucide-react";
 
 export default function DevFestPartnerPage() {
   const partners = [
-    { name: "AI GEEKS", logo: "/partners/ai-geeks.svg", category: "Core Co-Host", description: "Chennai's premier developer community for generative AI, agent architectures, and autonomous software." },
-    { name: "Chennai React", logo: "/partners/chennai-react.svg", category: "Core Community", description: "The official Chennai React meetup community building the modern React 19 and Next.js frontend ecosystem." },
-    { name: "GDG Cloud Chennai", logo: "/partners/gdg-cloud.svg", category: "Google Cloud", description: "Google Developer Group specializing in Google Cloud Platform, Kubernetes, and enterprise architectures." },
-    { name: "United AI Alliance (UAI)", logo: "/partners/uai.svg", category: "AI Research", description: "Collaborative consortium of researchers and developers advancing applied foundation models." },
-    { name: "Grafana Chennai", logo: "/partners/grafana.svg", category: "Observability", description: "Open-source telemetry, metrics, and visualization community." },
-    { name: "KUG Chennai", logo: "/partners/kug.svg", category: "Kotlin User Group", description: "Kotlin and Android engineers sharing best practices in multiplatform development." },
-    { name: "MongoDB User Group", logo: "/partners/mongo.svg", category: "Databases", description: "Document database architects and modern data modeling practitioners." },
+    {
+      name: "AI GEEKS",
+      logo: "/partners/ai-geeks.svg",
+      category: "Core Co-Host",
+      description:
+        "Chennai's premier developer community for generative AI, agent architectures, and autonomous software.",
+    },
+    {
+      name: "Chennai React",
+      logo: "/partners/chennai-react.svg",
+      category: "Core Community",
+      description:
+        "The official Chennai React meetup community building the modern React 19 and Next.js frontend ecosystem.",
+    },
+    {
+      name: "GDG Cloud Chennai",
+      logo: "/partners/gdg-cloud.svg",
+      category: "Google Cloud",
+      description:
+        "Google Developer Group specializing in Google Cloud Platform, Kubernetes, and enterprise architectures.",
+    },
+    {
+      name: "United AI Alliance (UAI)",
+      logo: "/partners/uai.svg",
+      category: "AI Research",
+      description:
+        "Collaborative consortium of researchers and developers advancing applied foundation models.",
+    },
+    {
+      name: "Grafana Chennai",
+      logo: "/partners/grafana.svg",
+      category: "Observability",
+      description:
+        "Open-source telemetry, metrics, and visualization community.",
+    },
+    {
+      name: "KUG Chennai",
+      logo: "/partners/kug.svg",
+      category: "Kotlin User Group",
+      description:
+        "Kotlin and Android engineers sharing best practices in multiplatform development.",
+    },
+    {
+      name: "MongoDB User Group",
+      logo: "/partners/mongo.svg",
+      category: "Databases",
+      description:
+        "Document database architects and modern data modeling practitioners.",
+    },
   ];
 
   return (
@@ -26,7 +66,8 @@ export default function DevFestPartnerPage() {
           Community Partners
         </h1>
         <p className="mt-3 text-sm sm:text-base text-slate-300">
-          DevFest Chennai 2026 is powered by a coalition of passionate developer user groups, open-source chapters, and student technology clubs.
+          DevFest Chennai 2026 is powered by a coalition of passionate developer
+          user groups, open-source chapters, and student technology clubs.
         </p>
       </div>
 
@@ -44,7 +85,8 @@ export default function DevFestPartnerPage() {
                     alt={p.name}
                     className="h-full w-full object-contain"
                     onError={(e) => {
-                      (e.currentTarget as HTMLImageElement).src = "/logo/react-atom.svg";
+                      (e.currentTarget as HTMLImageElement).src =
+                        "/logo/react-atom.svg";
                     }}
                   />
                 </div>
